@@ -1,0 +1,19 @@
+<div>
+    <h1>Detail</h1>
+    <input id="title" [(ngModel)]="todo.title" placeholder="title" />
+    <textarea id="body" [(ngModel)]="todo.body" placeholder="body"></textarea>
+
+    <select id="category" name="category" [(ngModel)]="todo.categoryId">
+        <option *ngFor=" let category of categorys" [value]="category.id">
+            {{ category.name }}
+        </option>
+    </select>
+
+    <select id="state" name="state" [(ngModel)]="todo.state">
+        <option *ngFor=" let state of states" [value]="state.code">
+            {{ state.name }}
+        </option>
+    </select>
+
+    <button (click)="onSubmit()">save</button>
+</div>

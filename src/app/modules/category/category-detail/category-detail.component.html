@@ -1,0 +1,14 @@
+<div>
+    <h1>Detail</h1>
+    <p>{{category.name}}</p>
+    <input id="name" [(ngModel)]="category.name" placeholder="name" />
+    <input id="slug" [(ngModel)]="category.slug" placeholder="slug" />
+
+    <select id="color" name="color" [(ngModel)]="category.color">
+        <option *ngFor=" let color of colors" [value]="color.code">
+            {{ color.className }}
+        </option>
+    </select>
+
+    <button (click)="onSubmit()">save</button>
+</div>

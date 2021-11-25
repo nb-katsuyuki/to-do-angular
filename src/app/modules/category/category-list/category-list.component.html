@@ -1,0 +1,11 @@
+<div>
+    <h1>List</h1>
+    <ul [hidden]="0 === categorys.length || 0 == colors.length">
+        <li *ngFor="let category of categorys">
+            <app-category-list-item [category]="category" [colors]="colors" (edit)="onEdit($event)"
+                (delete)="onDelete($event)">
+            </app-category-list-item>
+        </li>
+    </ul>
+    <a href="category/0">add</a>
+</div>

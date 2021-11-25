@@ -1,0 +1,11 @@
+<div>
+    <h1>List</h1>
+    <ul [hidden]="0 === todos.length || 0 == states.length || 0 === categorys.length">
+        <li *ngFor="let todo of todos">
+            <app-todo-list-item [todo]="todo" [categorys]="categorys" [colors]="colors" [states]="states"
+                (delete)="onDelete($event)">
+            </app-todo-list-item>
+        </li>
+    </ul>
+    <a href="todo/0">add</a>
+</div>
